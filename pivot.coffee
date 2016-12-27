@@ -268,7 +268,7 @@ callWithJQuery ($) ->
             @rowTotals = {}
             @colTotals = {}
             @allTotal = @aggregator(this, [], [])
-            @sorted = false
+            @sorted = opts.sorted ? false
 
             # iterate through input, accumulating data for cells
             PivotData.forEachRecord @input, @derivedAttributes, (record) =>
